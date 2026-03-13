@@ -1,10 +1,3 @@
-// Captura dos elementos da unidade A e B
-const cidade = document.querySelector('unidade__input unidadeA__cidade', 'unidade__input unidadeB__cidade');
-const codigo = document.querySelector('unidade__input unidadeA__codigo','unidade__input unidadeB__codigo');
-const anoConstrucao = document.querySelector('unidade__input unidadeA__ano', 'unidade__input unidadeB__ano');
-const qtdeCursos = document.querySelector('unidade__input unidadeA__cursos', 'unidade__input unidadeB__cursos');
-
-
 /* 🚨NÃO ALTERAR A CLASSE 🚨 */
 
 class Senai {
@@ -20,65 +13,24 @@ class Senai {
 
   abrirEscola() {
     this.statusFuncionamento = true;
-    mostrarMensagem(`Aberta: Bem-vindos ao SENAI ${this.cidade}`)
   }
 
   fecharEscola() {
     this.statusFuncionamento = false;
-    mostrarMensagem('Fechada: Atividades encerradas.')
   }
 }
 /* 🚨NÃO ALTERAR A CLASSE 🚨 */
 
-function mostrarMensagem(mensagem) {
-  textoResultado.textContent = mensagem;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* SUGESTÃO DE LÓGICA PARA O DESENVOLVIMENTO */
-
-
 
 /* ===== OBTER ELEMENTOS ===== */
+
+// Captura dos elementos da unidade A e B
+const cidade = document.querySelector('unidade__input unidadeA__cidade', 'unidade__input unidadeB__cidade');
+const codigo = document.querySelector('unidade__input unidadeA__codigo','unidade__input unidadeB__codigo');
+const anoConstrucao = document.querySelector('unidade__input unidadeA__ano', 'unidade__input unidadeB__ano');
+const qtdeCursos = document.querySelector('unidade__input unidadeA__cursos', 'unidade__input unidadeB__cursos');
+const formulario = document.querySelector('sistema__unidades')
+
 
 
 /* ===== FUNÇÃO DE VALIDAÇÃO ===== */
@@ -100,5 +52,12 @@ function mostrarMensagem(mensagem) {
 
 
 /* ===== NOVA CONSULTA ===== */
+
+function limpar() {
+  resultado.style.display = 'none';
+
+  formulario.reset();
+
+};
 
 
